@@ -96,7 +96,8 @@ const i18n = {
     "id": 13,
     "name": "Australia",
     "iso_2": "AU",
-    "iso_3": "AUS"
+    "iso_3": "AUS",
+    "displayName": "Australia"
   },
   "pricingText": {
     "off": "OFF",
@@ -939,7 +940,7 @@ const processKlarnaUpsell = async () => {
         body: JSON.stringify({
           offers: offers.map((o) => JSON.stringify(o)),
           order_id: lastOrderId,
-          pageId: "zKIIDt0BJD6GoTioan2NGDWsTb-dg8zziGM7HcPC0QSrYN5if-2BOaFKRlSgrRGj"
+          pageId: "cf4n8O99BX5fLwxKp4eisdZ-knuYCYOyTU_bsPk8T81CwLKvGTfpvcLMw71G6z1v"
         })
       }
     );
@@ -1019,7 +1020,7 @@ const processUpsell = async () => {
   }
   try {
     const orderData = JSON.parse(sessionStorage.getItem("orderData"));
-    orderData.pageId = "zKIIDt0BJD6GoTioan2NGDWsTb-dg8zziGM7HcPC0QSrYN5if-2BOaFKRlSgrRGj";
+    orderData.pageId = "cf4n8O99BX5fLwxKp4eisdZ-knuYCYOyTU_bsPk8T81CwLKvGTfpvcLMw71G6z1v";
     const lastOrderId = sessionStorage.getItem("cms_oid");
     const stripePayment = JSON.parse(sessionStorage.getItem("stripePayment"));
     const isStripeTestOrder = stripePayment && !stripePayment.isLive;
